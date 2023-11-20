@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    padding: 1em;
+}
+
+hr.vertical {
+    height:100%; /* you might need some positioning for this to work, see other questions about 100% height */
+    width:0;
+    border:1px solid black;
+}
+
+#user-details {
+    margin-bottom: 2em;
+    display: flex;
+}
+
+#tabs-container {
+    display: flex;
+    height: 100%;
+    /* width: 20%; */
+}
+
+.tabs{
+    /* display: flex; */
+    width: 25%;
+    margin: 5%;
+}
+
+#tabs-content{
+    display: flex;
+    margin: 1%;
+}
+
+#tabs {
+    display: flex;
+    margin-bottom: 1em;
+    /* display: flex; */
+    flex-direction: column;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.tab {
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid gray;
+    
+}
+
+.tab-content{
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #c0bcbc;
+    border-radius: 10px;
+}
+
+.main-content{
+    margin: 5%;
+    /* top: ; */
+    /* align-content: center; */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#account-creation-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+label, input, button {
+    margin-bottom: 0.5em;
+}
+
+#tab-content {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}
+
+.tab.active {
+    background-color: #e0e0e0;
+}
+
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+#nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+button {
+    background-color: #4caf50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Add some padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add cursor pointer on hover */
+    font-size: 16px; /* Set font size */
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+
+
+  /* Add this in your existing CSS file or create a new one */
+
+/* Styles for the blurred background when the popup is open */
+body.popup-open {
+    overflow: hidden;
+  }
+  
+  body.popup-open::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Adjust the alpha value for the desired level of blur */
+    z-index: 1;
+  }
+  
+  /* Styles for the popup form */
+  .popup {
+    display: none; /* Hide the popup by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Ensure the popup is above the blurred background */
+  }
+  
+  .popup h3 {
+    margin-top: 0;
+  }
+  
+  .popup label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .popup input,
+  .popup select,
+  .popup textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  .popup button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .popup button:hover {
+    background-color: #45a049;
+  }
+  
+  

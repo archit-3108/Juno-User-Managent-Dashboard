@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>User Management Dashboard</h1>
+        <div id="navbar">
+            <div id="nav-buttons">
+                <button id="registerButton">User Register</button>
+                <button id="closeButton">Close User</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="user-details">
+            
+            
+            <div class="tabs">
+                <div class="tab" data-tab="overview">Overview</div>
+                <div class="tab" data-tab="onboarding">Onboarding</div>
+                <div class="tab active" data-tab="monitoring">Monitoring</div>
+                <div class="tab" data-tab="flagged">Flagged</div>
+                <div class="tab" data-tab="source-of-income">Source of Income</div>
+                <div class="tab" data-tab="uar">UAR</div>
+            </div>
+            <hr class="verical">
+            <div class="main-content">
+                <h2>User Details</h2>
+                <label for="search">Search:</label>
+                <input type="text" id="search" placeholder="Enter username">
+                <div id="tabs-content">
+                    <div class="tab-content" data-tab="pending">Pending</div>
+                    <div class="tab-content" data-tab="completed">Completed</div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>User</th>
+                            <th>Email</th>
+                            <th>Risk Level</th>
+                            <th>Trigger Reason</th>
+                            <th>In Queue For</th>
+                            <th>Date Added</th>
+                            <th>Previously Reviewed</th>
+                        </tr>
+                    </thead>
+                    <div id="tab-content">
+                        <!-- Content for the active tab will go here -->
+                    </div>
+                    <tbody id="user-table-body">
+                        <!-- User data rows will go here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+    </main>
+    <div id="registerPopup" class="popup">
+        <!-- Your user registration form content goes here -->
+        <form>
+            <!-- Form fields go here -->
+            <section id="account-creation">
+                <h2>Account Creation</h2>
+                <form id="account-creation-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter username">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                    <button type="submit">Create Account</button>
+                </form>
+            </section>
+            <button type="button" onclick="closePopup('registerPopup')">Close</button>
+        </form>
+    </div>
+    
+    <div id="closePopup" class="popup">
+        <h3>Close User</h3>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="uar">File UAR:</label>
+        <select id="uar" name="uar">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="reason">Reason:</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+
+        <label for="note">Note:</label>
+        <textarea id="note" name="note" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+
+        <button type="button" onclick="closePopup('closePopup')">Close</button>
+    </form>
+
+    </div>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

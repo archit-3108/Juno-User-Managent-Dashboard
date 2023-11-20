@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "user": "John Doe",
+        "email": "john.doe@example.com",
+        "risk_level": "High",
+        "trigger_reason": "Unusual activity",
+        "in_queue_for": "2 hours",
+        "date_added": "2023-11-01T12:30:00Z",
+        "previously_reviewed": true
+    },
+    {
+        "id": 2,
+        "user": "Virat Kohli",
+        "email": "virat.k@cric.com",
+        "risk_level": "low",
+        "trigger_reason": "Frequent activity",
+        "in_queue_for": "1 hours",
+        "date_added": "2023-11-05T12:30:00Z",
+        "previously_reviewed": false
+    },
+    {
+        "id": 3,
+        "user": "John Cena",
+        "email": "johny.bhai@example.com",
+        "risk_level": "medium",
+        "trigger_reason": "no activity",
+        "in_queue_for": "2 days",
+        "date_added": "2022-10-01T12:30:00Z",
+        "previously_reviewed": true
+    }
+]
